@@ -8,19 +8,20 @@ const FormFields = props => {
     //     setForm({...form, name: event.target.value})
     // }
     console.log(props)
-    const [form, setForm] = useState({name: "", email: "", text: ""})
+    const [form, setForm] = useState({name: "", email: "", body: ""})
 
     const changeHandler = event => {
         setForm({...form, [event.target.name]: event.target.value})
     }
     
-    const submitForm = event => {
+    const submitForm = event => { 
         event.preventDefault();
         const newUser = {
-            // ...users, NOT DEFINED ?
+            ...form,
             id: Date.now()
         };
-        props.addNewUser(newUser)
+        props.addNewUser(newUser);
+        setForm({name: "", email: "", body: ""})
     }
     return (
         <form onSubmit={submitForm}> 
@@ -45,7 +46,7 @@ const FormFields = props => {
             <br />
 
             <label htmlFor='role' hidden>Drop Down</label> 
-            <select name='role' value=''>
+            <select name='role' value="">
                 <option value='open'></option>
                 <option value='frontend'>Frontend Engineer</option>
                 <option value='backend'>Backend Engineer</option>
@@ -58,7 +59,7 @@ const FormFields = props => {
             <textarea 
                 name='body' 
                 placeholder='witty note here' 
-                value={form.text}
+                value={form.body}
                 onChange={changeHandler}
             />
             <br />

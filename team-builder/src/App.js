@@ -10,7 +10,7 @@ function App() {
   const [user, setUser] = useState(data)
 
   const addNewUser = users => {
-    setUser({...user, users})
+    setUser([...user, users])
   }
 
   return (
