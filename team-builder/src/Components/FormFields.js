@@ -47,12 +47,15 @@ const FormFields = props => {
             <br />
 
             <label htmlFor='role' hidden>Drop Down</label> 
-            <select name='role' value="">
-                <option value='open'></option>
-                <option value='forward'>Forward</option>
-                <option value='midfield'>Midfielder</option>
-                <option value='defender'>Defender</option>
-                <option value='goalie'>Goalie</option>
+            <select 
+                name='role' 
+                value={form.role}
+                onChange={changeHandler}>
+                    <option value='open'>Role...</option>
+                    <option value='forward'>Forward</option>
+                    <option value='midfield'>Midfielder</option>
+                    <option value='defender'>Defender</option>
+                    <option value='goalie'>Goalie</option>
             </select>
             <br />
 
