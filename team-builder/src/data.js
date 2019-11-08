@@ -3,7 +3,8 @@ export default [
         id: 1,
         name: "",
         email: "",
-        body: ""
+        body: "",
+        role: ""
     }
 ]
 //exporting an ARRAY [] of OBJECTS {}

@@ -5,13 +5,14 @@ const Forms = props => {
 
     return (
         <div>
-            {props.userData.map(item => {
-                console.log(item)
+            {props.userData.map(user => {
+                console.log(user)
                 return (
-                    <div className='user' key={item.id}>
-                        <h2>{item.name}</h2>
-                        <p>{item.email}</p>
-                        <p>{item.body}</p>
+                    <div className='user' key={user.id}>
+                        <h2>{user.name}</h2>
+                        <p>{user.email}</p>
+                        <p>{user.body}</p>
+                        <p>{user.role}</p>
                     </div>
                 )
             })}

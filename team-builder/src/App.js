@@ -7,10 +7,10 @@ import data from './data'
 import './App.css';
 
 function App() {
-  const [user, setUser] = useState(data)
+  const [users, setUsers] = useState(data)
 
-  const addNewUser = users => { //what is this users tied too? 1:54min Dan video
-    setUser([...user, users])
+  const addNewUser = newUser => { //what is this users tied too? 1:54min Dan video
+    setUsers([...users, newUser])
   }
 
   return (
@@ -18,7 +18,7 @@ function App() {
       <header className="App-header"> 
         <h1>Welcome to The Team!</h1>
         <FormFields addNewUser={addNewUser} />
-        <Forms userData={user} />
+        <Forms userData={users} />
       </header>
     </div>
   );

@@ -8,9 +8,10 @@ const FormFields = props => {
     //     setForm({...form, name: event.target.value})
     // }
     console.log(props)
-    const [form, setForm] = useState({name: "", email: "", body: ""})
+    const [form, setForm] = useState({name: "", email: "", body: "", role: ""})
 
     const changeHandler = event => {
+        console.log(event.target.name, event.target.value)
         setForm({...form, [event.target.name]: event.target.value})
     }
     
@@ -21,7 +22,7 @@ const FormFields = props => {
             id: Date.now()
         };
         props.addNewUser(newUser);
-        setForm({name: "", email: "", body: ""})
+        setForm({name: "", email: "", body: "", role: "" })
     }
 
     return (
