@@ -23,6 +23,7 @@ const FormFields = props => {
         props.addNewUser(newUser);
         setForm({name: "", email: "", body: ""})
     }
+
     return (
         <form onSubmit={submitForm}> 
             <label htmlFor='name' hidden>Name:</label>
@@ -48,10 +49,10 @@ const FormFields = props => {
             <label htmlFor='role' hidden>Drop Down</label> 
             <select name='role' value="">
                 <option value='open'></option>
-                <option value='frontend'>Frontend Engineer</option>
-                <option value='backend'>Backend Engineer</option>
-                <option value='designer'>Designer</option>
-                <option value='data'>Data Scientist</option>
+                <option value='forward'>Forward</option>
+                <option value='midfield'>Midfielder</option>
+                <option value='defender'>Defender</option>
+                <option value='goalie'>Goalie</option>
             </select>
             <br />
 
